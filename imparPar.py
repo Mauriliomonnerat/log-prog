@@ -1,5 +1,5 @@
 # Passo 1: criar uma variavel
-# Passo 1.5: atribuir valor a variavel 
+# Passo 1.5: atribuir valor a variavel
 numero = int(input('Digite um numero: '))
 # Passo 2: verificar se o resto da divisão da variavel
 # por "2" é 0
@@ -8,7 +8,7 @@ resultado = numero%2
 if  resultado == 0:
     print ('É Par')
 else:
-    print('É Impar') 
+    print('É Impar')
 
 # Passo 3: Se não -> "É impar"
-print(resultado)1
+print(resultado)
