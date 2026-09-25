@@ -72,5 +72,72 @@
 #      lista.sort()
      
 # print (lista)
-                              
+
+  
  
+# EXERCÍCIODE SUBSTITUIÇÃO DE VALORES
+
+# lista = []
+# for i in range (0,3):
+#     numero = int(input("Digite o número: "))
+#     lista.append(numero)  
+
+# for numero in lista:
+#     if numero < 0:
+#         posicao = lista.index(numero)  #Guarde essa posição
+#         lista.remove(numero)           #Remova o número dessa posição
+#         lista.insert(posicao,0)        #Insira 0 nessa posição
+        
+#     else:
+#         print (lista)
+# print(lista)
+
+
+
+#EXECÍCIOS DE IDENTIFICAÇÃO DE NÚMEROS IGUAIS
+
+# lista = []
+# for i in range (0,3):
+#    numero = int(input("Digite o número: "))
+#    lista.append(numero)
+
+# numero1 = int(input("Digite um número adicional: "))
+# for numero in lista:
+#     if numero == numero1:
+#         posicao = lista.index(numero)
+#         print("Este número já foi inserido e está na posição: ", posicao+1)
+#         break
+        
+#     else:
+#         lista.append(numero1)
+#         print(lista)
+#         break
+
+
+
+#EXERCÍCIO MEDIA
+
+lista = []
+for i in range (0,3):
+    nota = int(input("Digite a nota: "))
+    lista.append(nota)
+
+media = sum(lista)/len(lista)
+
+acima_media = []
+for nota in lista:
+    if nota > media:
+        acima_media.append(nota)
+
+if len(acima_media) > 0:
+    print(f"{len(acima_media)} notas ficaram acima da média e foram as notas {acima_media}")
+
+else:
+    print("Nenhuma nota ficou acima da média")
+    
+
+
+
+
+        
+        
