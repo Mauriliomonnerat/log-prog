@@ -39,14 +39,14 @@
 
 
 
-#EXERCÍCIO 4
+# EXERCÍCIO 4
 
 #maiores_que_10 = (                  
 #    [numero for numero in lista if numero > 10])   #Aqui vai apresentar os numeros > 10 dentro da lista na variável maiores_que_10.
 
 
 
-#EXERCÍCIO 5
+# EXERCÍCIO 5
 
 #cont1 = 0
 #cont2 = 0
@@ -62,7 +62,7 @@
              
         
              
-#EXERCÍCIO 6
+# EXERCÍCIO 6
 
 # lista = []
 
@@ -94,7 +94,7 @@
 
 
 
-#EXECÍCIOS DE IDENTIFICAÇÃO DE NÚMEROS IGUAIS
+# EXECÍCIOS DE IDENTIFICAÇÃO DE NÚMEROS IGUAIS
 
 # lista = []
 # for i in range (0,3):
@@ -117,27 +117,71 @@
 
 #EXERCÍCIO MEDIA
 
-lista = []
-for i in range (0,3):
-    nota = int(input("Digite a nota: "))
-    lista.append(nota)
+# lista = []
+# for i in range (0,3):
+#     nota = int(input("Digite a nota: "))
+#     lista.append(nota)
 
-media = sum(lista)/len(lista)
+# media = sum(lista)/len(lista)
 
-acima_media = []
-for nota in lista:
-    if nota > media:
-        acima_media.append(nota)
+# acima_media = []
+# for nota in lista:
+#     if nota > media or nota == 6:
+#         acima_media.append(nota)
 
-if len(acima_media) > 0:
-    print(f"{len(acima_media)} notas ficaram acima da média e foram as notas {acima_media}")
+# if len(acima_media) > 0:
+#     print(f"{len(acima_media)} notas ficaram acima da média e foram as notas {acima_media}")
 
-else:
-    print("Nenhuma nota ficou acima da média")
+# else:
+#     print("Nenhuma nota ficou acima da média")
     
 
+# INVERSÃO DE VERTOR
+
+# lista = []
+# for i in range (0,3):
+#     nota = int(input("Digite a nota: "))
+#     lista.append(nota)
+
+# lista_2 = lista.copy()        #Copiei o vetor
+# lista_2.reverse()
+# print(lista_2)
 
 
+# MAIOR E MENOR
+
+# lista = []
+# for i in range (0,3):
+#     nota = int(input("Digite a nota: "))
+#     lista.append(nota)
+#     menor = min(lista)
+#     maior = max(lista)
+# print(f"O maior número é o {maior} e ele está na posição {lista.index(maior)+1}")
+# print(f"O maior número é o {menor} e ele está na posição {lista.index(menor)+1}")
 
         
-        
+# #ESTUDAR
+# lista = [0,1,9,-5,8]
+# j = 0
+# lista_inversa = []
+# for i in range ((len(lista)-1, -1,1)):
+#     lista_inversa [j] = lista[i]
+#     j = j + 1
+
+
+# garagem = [["Land Rover", 2014], 
+#            ["Palio 97", 1997],
+#            ["Gol", 2022]]
+
+# for carro in garagem:                   # aqui ele só coloco um colchete porque com o for in ele já está dentro
+#    print(f"{carro[0]}, ano {carro[1]}") # ele vai na primeira coloca que é a 0 e vai na segunda é o ano 
+
+
+# Modificar um dos carros
+# for i in range(0, len(garagem)):
+#    if i == 0:
+#       garagem[i][0] = "Ferrari F430"
+      # o i vai percorrer qual linha 
+      # o 0 vai na coluna
+
+
