@@ -184,4 +184,123 @@
       # o i vai percorrer qual linha 
       # o 0 vai na coluna
 
+# Construa um programa onde o usuário digitará dez números. O programa
+# deverá calcular quais deles são maiores que dez.
 
+# lista = []
+# for i in range (0,3):
+#     numero = int(input("Digite um número: "))
+#     lista.append(numero)
+
+# for numero_maior in lista:
+#     if numero_maior> 10:
+#         print (numero_maior)
+
+
+# Construa um programa onde o usuário digitará sete números e o programa
+# escreverá, na tela, quantos deles são pares e quantos são ímpares.
+
+# lista = []
+# for i in range (0,3):
+#     numero = int(input("Digite um número: "))
+#     lista.append(numero)
+
+# contador_par = 0
+# contador_impar = 0
+
+# for numero in lista:
+#     if numero % 2 == 0:
+#         contador_par += 1
+
+#     else:
+#         contador_impar += 1
+
+# print (f"Você digitou {contador_par} número pares e {contador_impar} números impares")
+
+# Construa um programa onde o usuário digitará cinco números e o programa
+# deverá colocar esses números dentro do vetor em ordem crescente.
+
+# lista = []
+# for i in range (0,3):
+#     numero = float(input("Digite um número: "))
+#     lista.append(numero)
+
+# lista.sort()
+# print (lista)
+
+# Construa um programa onde o usuário digitará o nome e a média de dez
+# alunos e o programa escreverá, na tela, o nome de todos com a média acima
+
+
+# lista = [] #COLOCAR NO ARRAY
+# for i in range (0,3):
+#     nome = (input("Digite o nome: "))
+#     nota = float(input("Digite a nota: "))
+#     lista.append([nome, nota])
+
+# soma = 0
+
+# for aluno in lista:         # Aluno será cada vetor = [Maurilio, 10]
+#     soma += aluno[1]        # Soma a coluna da nota
+
+# media = soma / len(lista)   # Não pode usar o sum(lista) porque é uma matriz que contém strings
+
+# for aluno in lista:
+#     if aluno[1] > media:    
+#         print (aluno[0])
+
+
+# Construa um programa que o usuário digitará o nome e a idade de dez
+# pessoas e o programa escreverá o nome do usuário mais novo.
+
+# lista = []
+# for i in range (0,3):
+#     nome = (input("Digite o nome: "))
+#     idade = float(input("Digite a idade: "))
+#     lista.append([nome, idade])
+
+# mais_novo = lista[0]
+    
+# for pessoa in lista:
+#     if pessoa [1] < mais_novo[1]:
+#         mais_novo = pessoa
+
+# print("A pessoa mais nova é:", mais_novo[0])
+
+
+# Construa uma página/programa onde o usuário digitará o nome e o bairro de
+# dez pessoas. O programa exibirá o nome e bairro das pessoas em ordem
+# alfabética.
+
+# lista = []
+# for i in range (0,3):
+#     nome = (input("Digite o Nome: "))
+#     bairro = (input("Digite a Bairro: "))
+#     lista.append([nome, bairro])
+
+# def pegar_nome(pessoa):
+#     return pessoa[0]
+
+# lista.sort(key=pegar_nome)
+
+# for pessoa in lista:
+#     print(pessoa[0], "-", pessoa[1])
+
+
+# Construa uma página onde o usuário digitará o nome e a média de cinco
+# alunos e o programa só aceitará a média do aluno caso ela esteja entre zero
+# e dez.
+
+# lista = []
+
+# for i in range(0, 5):
+#     nome = input("Digite o Nome: ")
+#     nota = float(input("Digite a Nota: "))
+
+#     while nota < 0 or nota > 10:
+#         print("Nota inválida! Digite uma nota entre 0 e 10.")
+#         nota = float(input("Digite a Nota: "))
+
+#     lista.append([nome, nota])
+
+# print(lista)
