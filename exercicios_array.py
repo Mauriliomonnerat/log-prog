@@ -260,7 +260,7 @@
 #     lista.append([nome, idade])
 
 # mais_novo = lista[0]
-    
+
 # for pessoa in lista:
 #     if pessoa [1] < mais_novo[1]:
 #         mais_novo = pessoa
@@ -276,12 +276,19 @@
 # for i in range (0,3):
 #     nome = (input("Digite o Nome: "))
 #     bairro = (input("Digite a Bairro: "))
+
 #     lista.append([nome, bairro])
 
+#     cadastro[i] = [nome,bairro]
+
+# Versão 1
+#lista.sort(key=lambda lugares: lugares[1])       #Crie uma função que recebe lugares e retorna lugares[0]
+
+#Versão 2
 # def pegar_nome(pessoa):
 #     return pessoa[0]
+# lista.sort(key=pegar_nome)   
 
-# lista.sort(key=pegar_nome)
 
 # for pessoa in lista:
 #     print(pessoa[0], "-", pessoa[1])
@@ -295,12 +302,76 @@
 
 # for i in range(0, 5):
 #     nome = input("Digite o Nome: ")
-#     nota = float(input("Digite a Nota: "))
+#     media = float(input("Digite a Média: "))
+#     while media < 0 or media > 10
+#       media = float(input("Digite a Média: "))
+#     lista.append([nome, media])
 
-#     while nota < 0 or nota > 10:
-#         print("Nota inválida! Digite uma nota entre 0 e 10.")
-#         nota = float(input("Digite a Nota: "))
-
-#     lista.append([nome, nota])
 
 # print(lista)
+
+
+# Construa uma matriz 2X2 e, como saída desse programa, a média 
+# e a soma dos valores digitados deverão ser calculadas. ERRADO
+
+ # matriz []                              ESTUDAR!
+# for i in range (2):
+#     for j in range(2):
+#         matriz [i][j] = int (input("Digite um numero: "))
+
+#Versão 1
+# soma = 0
+# for linha in matriz:
+    # for coluna in linha:
+        # soma += contador
+
+# #Versão 2
+# for i in range(len(matriz)):
+#     for j in range(len(matriz[0])):
+
+# Construa um jogo Quadrado Mágico 3X3, no qual o usuário preencherá o
+# vetor com números de um a nove (sem repetir números) e a soma de todas
+# as linhas, colunas e diagonais será igual a quinze.
+
+# lista = []
+# for i in range(0, 3):
+#     numero_1 = float(input("Digite o primeiro número de 1 a 9: "))
+#     while numero_1 < 1 or numero_1 > 9:
+#         numero_1 = float(input("Número inválido. Digite um número de 1 a 9: "))
+#     numero_2 = float(input("Digite o Segundo número de 1 a 9: "))
+#     while numero_2 == numero_1 or numero_2 < 1 or numero_2 > 9:
+#         numero_2 = float(input("Número repetido, digite outro número: "))
+#     numero_3 = float(input("Digite o Terceiro número: "))
+#     while numero_3 == numero_1 or numero_3 == numero_2 or numero_3 < 1 or numero_3 > 9:
+#         numero_3 = float(input("Número repetido, digite outro número: "))
+#     lista.append([numero_1, numero_2, numero_3])
+
+# Verificar linhas
+# Versão 1
+# linha_1 = lista[0][0] + lista[0][1] + lista[0][2]
+# linha_2 = lista[1][0] + lista[1][1] + lista[1][2]
+# linha_3 = lista[2][0] + lista[2][1] + lista[2][2]
+
+# Versão 2
+# soma = 0
+# for linha in lista:
+#     for numero in linha:
+#         soma += numero
+
+# Verificar colunas
+# coluna_1 = lista[0][0] + lista[1][0] + lista[2][0]
+# coluna_2 = lista[0][1] + lista[1][1] + lista[2][1]
+# coluna_3 = lista[0][2] + lista[1][2] + lista[2][2]
+
+# # Verificar diagonais
+# diagonal_1 = lista[0][0] + lista[1][1] + lista[2][2]
+# diagonal_2 = lista[0][2] + lista[1][1] + lista[2][0]
+
+# if (linha_1 == 15 and linha_2 == 15 and linha_3 == 15 and
+#     coluna_1 == 15 and coluna_2 == 15 and coluna_3 == 15 and
+#     diagonal_1 == 15 and diagonal_2 == 15):
+
+#     print("Vitória!")
+# else:
+#     print("Derrota!")
+
