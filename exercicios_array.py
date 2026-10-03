@@ -29,11 +29,11 @@
 
 #nomes = ['Bruna', 'André', 'Caio']
 
-#nomes.sort()                           # O SORT ordena a lista de forma crescente.
+#lista.sort()                           # O SORT ordena a lista de forma crescente.
 
-#nomes.sort(reverse = True)             # O REVERSE ordena a lista de forma decrescente.
+#lista.sort(reverse = True)             # O REVERSE ordena a lista de forma decrescente.
 
-#nomes2 = sorted(nomes)                 # O SORTED ordena e salva a lista em outro local (cria outra lista).
+#lista = sorted(nomes)                 # O SORTED ordena e salva a lista em outro local (cria outra lista).
 
 #nomes.insert(2, "Maurilio")            # O INSERT insere, na posição que você quer, o que você quer.
 
@@ -329,49 +329,59 @@
 # for i in range(len(matriz)):
 #     for j in range(len(matriz[0])):
 
-# Construa um jogo Quadrado Mágico 3X3, no qual o usuário preencherá o
-# vetor com números de um a nove (sem repetir números) e a soma de todas
-# as linhas, colunas e diagonais será igual a quinze.
 
-# lista = []
-# for i in range(0, 3):
-#     numero_1 = float(input("Digite o primeiro número de 1 a 9: "))
-#     while numero_1 < 1 or numero_1 > 9:
-#         numero_1 = float(input("Número inválido. Digite um número de 1 a 9: "))
-#     numero_2 = float(input("Digite o Segundo número de 1 a 9: "))
-#     while numero_2 == numero_1 or numero_2 < 1 or numero_2 > 9:
-#         numero_2 = float(input("Número repetido, digite outro número: "))
-#     numero_3 = float(input("Digite o Terceiro número: "))
-#     while numero_3 == numero_1 or numero_3 == numero_2 or numero_3 < 1 or numero_3 > 9:
-#         numero_3 = float(input("Número repetido, digite outro número: "))
-#     lista.append([numero_1, numero_2, numero_3])
 
-# Verificar linhas
-# Versão 1
-# linha_1 = lista[0][0] + lista[0][1] + lista[0][2]
-# linha_2 = lista[1][0] + lista[1][1] + lista[1][2]
-# linha_3 = lista[2][0] + lista[2][1] + lista[2][2]
+# Construa um jogo Quadrado Mágico 3X3, no qual o usuário 
+# preencherá o vetor com números de um a nove (sem repetir números)
+# e a soma de todas as linhas, colunas e 
+# diagonais será igual a quinze.
 
-# Versão 2
-# soma = 0
-# for linha in lista:
+# iniciar a matriz com o que o usuario digitar (matriz 3x3)
+# matriz = []
+# for i in range(3): # 3 linhas
+#     linha = [] # inicia a linha vazia
+#     for j in range(3): # 3 colunas
+#         numero = int(input('Digite um número entre 1 e 9: '))
+#         # garantir que não tenha numeros fora do intervalo 1~9
+#         while numero < 1 or numero > 9:
+#             numero = int(input('Digite um número entre 1 e 9: '))
+
+#         linha.append(numero) # guarda o numero na linha
+
+#     matriz.append(linha) # adiciona a linha completa a matriz
+
+# # Forma 1 - logica
+# soma = 0 # soma cada possibilidade
+# somas = [] # guarda todas as somas em posições diferentes
+
+# # Verificação das linhas
+# for linha in matriz:
+#     soma = 0
 #     for numero in linha:
 #         soma += numero
+#     somas.append(soma)
 
-# Verificar colunas
-# coluna_1 = lista[0][0] + lista[1][0] + lista[2][0]
-# coluna_2 = lista[0][1] + lista[1][1] + lista[2][1]
-# coluna_3 = lista[0][2] + lista[1][2] + lista[2][2]
+# # Verificar colunas
+# for i in range(3): # trava as colunas para 'andar' nas linhas
+#     soma = 0 # cria uma variavel para somar os numeros das colunas
+#     for j in range(3): # isso é para andar nas linhas
+#         soma += matriz[j][i]
+#     somas.append(soma)
 
-# # Verificar diagonais
-# diagonal_1 = lista[0][0] + lista[1][1] + lista[2][2]
-# diagonal_2 = lista[0][2] + lista[1][1] + lista[2][0]
+# # verificar diagonais
+# diagonal_principal = 0 # da esquerda para direita
+# for i in range(3):
+#     diagonal_principal += matriz[i][i]
 
-# if (linha_1 == 15 and linha_2 == 15 and linha_3 == 15 and
-#     coluna_1 == 15 and coluna_2 == 15 and coluna_3 == 15 and
-#     diagonal_1 == 15 and diagonal_2 == 15):
+# somas.append(diagonal_principal)
 
-#     print("Vitória!")
+# diagonal_secundaria = 0
+# for i in range(3): # da direita para esquerda
+#     diagonal_secundaria += matriz[i][2-i]
+
+# somas.append(diagonal_secundaria)
+
+# if all(soma == 15 for soma in somas):
+#     print('Vitoria')
 # else:
-#     print("Derrota!")
-
+#     print('Derrota')
